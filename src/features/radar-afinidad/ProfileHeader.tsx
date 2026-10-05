@@ -3,11 +3,9 @@ import type { RadarMock } from "./types";
 
 interface Props {
   perfil: RadarMock["perfil"];
-  afinidadGlobal: number;
-  variacion: number;
 }
 
-export default function ProfileHeader({ perfil, afinidadGlobal, variacion }: Props) {
+export default function ProfileHeader({ perfil }: Props) {
   const [fotoError, setFotoError] = useState(false);
   const iniciales = perfil.nombre.split(" ").map((p) => p[0]).slice(0, 2).join("");
 
@@ -42,12 +40,6 @@ export default function ProfileHeader({ perfil, afinidadGlobal, variacion }: Pro
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="rounded-md bg-[#0f1b2d] px-7 py-3 text-center">
-        <p className="text-4xl font-bold text-white">{afinidadGlobal.toFixed(2)}</p>
-        <p className="text-[8px] uppercase tracking-widest text-slate-400">Afinidad global</p>
-        <p className="text-[10px] font-semibold text-green-400">+{variacion} vs. anterior</p>
       </div>
     </section>
   );

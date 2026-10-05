@@ -19,7 +19,7 @@ export default function RadarAfinidadPage() {
         </div>
 
         <main className="flex-1 space-y-3 overflow-y-auto p-5">
-          <ProfileHeader perfil={perfil} afinidadGlobal={kpis.afinidadGlobal} variacion={kpis.variacionVsAnterior} />
+          <ProfileHeader perfil={perfil} />
           <KpiCards kpis={kpis} />
           <div className="grid gap-3 lg:grid-cols-[1fr_280px]">
             <AffinityRadarChart areas={areas} promedio={media} />
